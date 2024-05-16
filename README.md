@@ -5,6 +5,9 @@ BBEdit additions, such as language modules, language servers, themes, text filte
 BBEdit has good documentation on how to customize the functionality. If you can't sort that out, not sure you should be using BBEdit (or Ansible/Serverless for that matter). *HINT*: You need to copy what you want from this repo to your BBEdit support folder. Whether you clone, link, download and copy, or just create a new file and do a good old fashioned copy-paste, that, my friend, is up to you.
 
 ## Contents
+### Chat API Descriptions
+BBEdit 15.1 got a new feature allowing to use other AI services then ChatGPT for the AI Worksheets. This folder contains config templates for Google's Gemini API and Gemini on Vertex AI API. I think neither are currently fully functional due to the differences in the payloads and, in the case of Gemini API, how the params are part of the URL. Maybe in 15.2... Or maybe they already work.
+
 ### AI Assistant Text Filters
 There are three Text Filters that provide limited AI assistant functionality to BBEdit. The scripts are written in ruby, and utilize Google's PALM2 API. You will need your own API key for the filters to work. Replace the key variable string with your key inside the script file. But don't commit that as leaking the key is bad! If you wish to use OpenAI, switching the url endpoint and parameters should be easy.
 
