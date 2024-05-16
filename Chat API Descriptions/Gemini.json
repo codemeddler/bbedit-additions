@@ -1,0 +1,39 @@
+{
+	"com.barebones.DocumentType": "com.barebones.bbedit.ChatAPIDescription",
+	"com.barebones.DocumentFormatVersion": "1",
+	"identifier": "net.venemies.GoogleGemini1.0",
+	"displayName": "GoogleGemini",
+	"endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=$GOOGLE_API_KEY",
+	"models": [
+		"gemini-pro"
+	],
+	"defaultModel": "gemini-pro",
+	"getAPIKeyURL": "https://aistudio.google.com/app/apikey",
+	"accountHelpURL": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart",
+	"requiresAPIKey": 0,
+	"endpointAdditionalHeaders": {
+		"Content-Type": "application/json"
+	},
+	"additionalRequestParameters": {
+		"contents": [{
+			"parts":[
+				{"text": "THIS IS WHERE TEXT FROM BB EDIT WOULD NEED TO GO."}
+			]
+		}],
+		"safetySettings": [
+			{
+				"category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+				"threshold": "BLOCK_ONLY_HIGH"
+			}
+		],
+		"generationConfig": {
+			"stopSequences": [
+				"CAN REMOVE"
+			],
+			"temperature": 1.0,
+			"maxOutputTokens": 800,
+			"topP": 0.8,
+			"topK": 10
+		}
+	}
+}

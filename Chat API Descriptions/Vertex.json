@@ -1,0 +1,25 @@
+{
+	"com.barebones.DocumentType": "com.barebones.bbedit.ChatAPIDescription",
+	"com.barebones.DocumentFormatVersion": "1",
+	"identifier": "net.venemies.GoogleVertex1.0",
+	"displayName": "Google Vertex API",
+	"endpoint": "https://us-central1-aiplatform.googleapis.com/v1/projects/${PROJECT_ID}/locations/us-central1/publishers/google/models/${MODEL_ID}:generateContent",
+	"models": [
+		"gemini-pro"
+	],
+	"defaultModel": "gemini-pro",
+	"getAPIKeyURL": "https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal",
+	"accountHelpURL": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview",
+	"requiresAPIKey": 1,
+	"endpointKeyHeaderValueFormat": "Bearer: ${key}",
+	"endpointAdditionalHeaders": {
+		"Content-Type": "application/json"
+	},
+	"additionalRequestParameters": {
+		"parameters": {
+			"temperature": TEMPERATURE,
+			"maxOutputTokens": MAX_OUTPUT_TOKENS,
+			"candidateCount": CANDIDATE_COUNT
+		}
+	}
+}
